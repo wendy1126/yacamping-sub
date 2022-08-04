@@ -1,0 +1,290 @@
+/*본문 폰트*/
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*헤드 타이틀 폰트*/
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*전체 적용*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SUIT-Regular';
+}
+
+/*제일 큰 wrap*/
+.wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/*회원가입 영역*/
+.join {
+  width: 550px;
+  height: 1000px;
+  background: white;
+  border-radius: 10px;
+}
+
+/*header 테두리*/
+.headermom {
+  width: 280px;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
+}
+
+/*header(로고 이미지+로고)*/
+.header {
+  display: flex;
+  width: 280px;
+  position: relative;
+  left: 40px;
+}
+
+.header:hover {
+  cursor: pointer;
+}
+
+.header img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 9px;
+}
+
+/*헤더 부분 글자(야캠핑어때)*/
+.header p {
+  color: #7DB249;
+  font-size: 2.2em;
+  text-shadow: 0.5px 0.5px 0.5px gray;
+  position: relative;
+  top: 13px;
+  height: 50px;
+  font-family: 'Cafe24Ssurround';
+}
+
+/*회원가입 작성 영역*/
+.join_content {
+  position: relative;
+  top: 50px;
+}
+
+/*회원가입 input 영역*/
+input { 
+  padding: 5px; 
+  border: 1px solid #dedede;
+  width: 400px;
+}
+
+input:read-only { 
+  background-color: #dedede;
+}
+
+/*전체 select 영역*/
+select {
+  padding: 7px; 
+  vertical-align: middle;
+}
+
+/*회원가입 작성란 구분별 영역*/
+.row_group {
+  margin: 5px;
+}
+
+/*회원가입 작성란 구분별 이름*/
+.join_title {
+  width: 150px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+  left: 70px;
+}
+
+#check {
+  position: relative;
+  bottom: 15px;
+  left: 70px;
+  font-size: 12px;
+}
+
+/*input영역 중 class=enter*/
+.enter {
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+/*input 영역중 span class=input*/
+.input {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+/*성별 영역 중 span class=input_gender*/
+.input_gender {
+  margin: 32px;
+  position: relative;
+  left: 70px;
+}
+
+/*span class=input_gender중 input*/
+.input_gender input {
+  width: 50px;
+  margin:0 auto;
+}
+
+/*span class=input_gender 중 label*/
+.input_gender label {
+  margin-left: -10px;
+}
+
+/*전화번호 작성 영역*/
+.join_row_phone {
+  margin-top: 20px;
+}
+
+/*전화번호 작성 영역 중 나라코드 select 영역*/
+#nation {
+  width: 155px;
+  height: 30px;
+  margin-left: 70px;
+  border-radius: 0;
+  border-style: none;
+}
+
+/*전화번호 작성영역 중 input*/
+.input_phone input {
+  width: 245px;   
+}
+
+/*이메일 작성 영역*/
+.input_email {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.input_email input {
+  width: 125px;
+}
+
+.input_email .enter1 {
+  width: 125px;
+}
+
+.input_email select {
+  border-radius: 0;
+  border-style: none;
+}
+
+/*주소 작성 영역 중 우편번호*/
+.ad_post {
+  margin-left: 70px;
+}
+
+
+.ad_post .enter {
+  width: 125px;
+}
+
+.ad_post .ad_find {
+  width: 125px;
+}
+
+/*주소 작성 영역 중 주소 작성란*/
+#sample6_address, #sample6_detailAddress, #sample6_extraAddress {
+  display: block;
+  margin: 0 auto;
+}
+
+.ad_ad {
+  position: relative;
+  bottom: 9px;
+}
+
+#sample6_detailAddress, #sample6_extraAddress {
+  margin-top: 5px;
+}
+
+/*푸터*/
+.footer {
+  text-align: center;
+  position: relative;
+  top: 95px;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.footer li {
+  list-style: none;
+  position: relative;
+  display: inline;
+  white-space: nowrap;
+}
+
+li::after{
+  content: "|";
+  align-items: center;
+  position: relative;
+  top: 2px;
+}
+
+li:last-child::after{
+  content: " ";
+}
+
+address {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  position: relative;
+}
+
+address .logo {
+  color: #7DB249;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+address .copy {
+  font-size: 11px;
+  margin-top: 3.5px;
+}
+
+/*회원가입 버튼*/
+.join_end {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 60px;
+}
+
+.join_end .join_click {
+  width: 200px;
+  background-color: #E8E0A1;
+}
+
+.join_end .join_click:hover {
+  cursor: pointer;
+}

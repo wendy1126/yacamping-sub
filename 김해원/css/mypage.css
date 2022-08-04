@@ -1,0 +1,382 @@
+/*헤드 타이틀 폰트*/
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*본문 폰트*/
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+/*-----------------전체 사이즈 및 색상 시작-----------------*/
+
+/*전체 적용*/
+* {
+  font-family: 'SUIT-Regular';
+  margin: 0 auto;
+}
+
+/*본문 외 배경 영역*/
+body {
+  background-color: #F9F9F9;
+}
+
+/*본문 감싸는 영역(헤더~푸터)*/
+.container {
+  width: 1280px;
+}
+
+/*본문 영역 크기 및 배경*/
+.allcontent {
+  width: 960px;
+  background-color: white;
+}
+
+/*-----------------전체 사이즈 및 색상 끝-----------------*/
+
+/*-----------------헤더 시작-----------------*/
+
+/*헤더 전체 위치 및 크기*/
+header {
+  position: relative;
+  width: 960px;
+}
+
+.head {
+  width: 960px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: #7DB249;
+}
+
+/*로고 이미지*/
+.logo {
+  width: 54px;
+  height: 55px;
+  float: left;
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+/*로고 타이틀*/
+.logotitle {
+  float: left;
+  color: white;
+  font-size: 30px;
+  font-family: 'Cafe24Ssurround';
+  position: relative;
+  top: 14px;
+  left: 3px;
+}
+
+.logotitle:hover {
+  cursor: pointer;
+}
+
+/*로그인 아이콘 이미지*/
+.userlogo {
+  width: 63px;
+  height: 63px;
+  float: right;
+  position: relative;
+  bottom: 2px;
+  right: 5px;
+}
+
+.userlogo:hover {
+  cursor: pointer;
+}
+
+/*마우스 오버 시 드롭다운 메뉴*/
+
+.login ul {
+  list-style: none;
+  width: 150px;
+  float: right;
+}
+
+.login a {
+  text-decoration: none;
+}
+
+.login>li {
+  list-style: none;
+}
+
+.login>li>a {
+  display: block;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.login>li:hover .menu {
+  display: block;
+}
+
+.login .menu {
+  display: none;
+  position: absolute;
+  left: 770px;
+  top: 50px;
+  text-align: center;
+}
+
+.login .menu a {
+  display: block;
+  padding: 5px;
+  background-color:rgba(125, 178, 73, 0.7);/*까만색(0,0,0) 80% 불투명도*/
+  color: #fff;
+}
+
+/*-----------------헤더 끝-----------------*/
+
+/*-----------------프로필 시작-----------------*/
+
+.private {
+  margin-top: 60px;
+  height: 200px;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.user {
+  display: block;
+  position: relative;
+  width: 350px;
+  top: 50px;
+  text-align: left;
+}
+
+.modify {
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  margin: auto;
+  display: block;
+  margin-top: 5px;
+  background-color: white;
+  color: #7DB249;
+  font-weight: bold;
+}
+
+
+.txt {
+  display: inline-block;
+  position: relative;
+  bottom: 30px;
+  left: 20px;
+  text-align: left;
+  line-height: 28px;
+}
+
+.hi {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.user img {
+  width: 100px;
+  height: 100px;
+}
+
+
+/*-----------------프로필 끝-----------------*/
+
+/*-----------------개인정보&예약내역 시작-----------------*/
+
+
+.alltabMenu {
+  width: 900px;
+  height: 850px;
+  border: 1px solid #D9D9D9;
+  margin: 30px;
+}
+
+/*라디오 버튼 숨김*/
+.alltabMenu input[type="radio"] {
+  display: none;
+}
+
+/* 탭을 클릭하면 내용이 보이게*/
+#tab1:checked~#profile,
+#tab2:checked~#list {
+  display: block;
+}
+
+.alltabMenu label {
+  /*탭 메뉴 제목*/
+  display: inline-block;
+  /*가로 배치*/
+  padding: 7px 196px;
+  /**/
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.alltabMenu label:hover {
+  cursor: pointer;
+}
+
+/*선택된 탭 메뉴 제목*/
+.alltabMenu input:checked+label {
+  background-color: #B1D690;
+}
+
+.tabContent {
+  /*탭 내용 스타일*/
+  display: none;
+  /*탭 내용 위에 가로선*/
+  width: 440px;
+  margin-top: 50px;
+}
+
+.tabContent p {
+  font-size: 13px;
+}
+
+.tabContent div {
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.tabContent input {
+  margin: 0px;
+  width: 350px;
+}
+
+.tabContent button {
+  color: #7DB249;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+.tabContent button:hover {
+  cursor: pointer;
+}
+
+.tabContent button img {
+  width: 13px;
+  height: 13px;
+  position: relative;
+  top: 1.5px;
+  right: 2px;
+}
+
+#list {
+  width: 840px;
+  height: 500px;
+}
+
+
+#list>ul {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #F5F5F5;
+  width: 800px;
+  float: left;
+}
+
+#list>ul>li {
+  width: 81px;
+  margin: 5px;
+  text-align: center;
+  font-size: 13px;
+  display: inline-block;
+  /*이미지 가로 배치*/
+}
+
+.submit {
+  width: 140px;
+  height: 25px;
+  display: flex;
+  margin-top: 50px;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
+.btn .submit {
+  color: black;
+  text-align: center;
+  font-size: 15px;
+}
+
+#list .camplist {
+  background-color: white;
+}
+
+
+
+/*-----------------개인정보&예약내역 끝-----------------*/
+
+
+/*-----------------푸터 시작-----------------*/
+
+/*푸터 전체 영역*/
+footer {
+  width: 960px;
+  background-color: #F5F5F5;
+  font-size: 12px;
+  height: 80px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+/*푸터 회사소개~사업자정보확인 위치*/
+.footer_link {
+  float: left;
+  display: flex;
+  position: relative;
+  left: 10px;
+}
+
+/*푸터 회사소개~사업자정보확인 링크*/
+.footer_link a {
+  text-decoration: none;
+  color: #808080;
+}
+
+.footer_link a:hover {
+  color: red;
+  cursor: pointer;
+}
+
+/*Corp 위치 및 색상*/
+.corp {
+  float: right;
+  color: #808080;
+  position: relative;
+  right: 20px;
+}
+
+/*푸터 컨텐츠 위치*/
+.footer_content {
+  float: left;
+  position: relative;
+  top: 20px;
+  left: 10px;
+  color: #808080;
+  margin-bottom: 40px;
+}
+
+/*푸터 회사 주소 및 전화번호 위치*/
+.compony_info {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+/*-----------------푸터 끝-----------------*/

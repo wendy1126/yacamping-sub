@@ -1,0 +1,565 @@
+/*헤드 타이틀 폰트*/
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*본문 폰트*/
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*-----------------전체 사이즈 및 색상 시작-----------------*/
+
+/*전체 적용*/
+* {
+  font-family: 'SUIT-Regular';
+  margin: 0 auto;
+}
+
+/*본문 외 배경 영역*/
+body {
+  background-color: #F9F9F9;
+}
+
+/*본문 감싸는 영역(헤더~푸터)*/
+.container {
+  width: 1280px;
+}
+
+/*본문 영역 크기 및 배경*/
+.allcontent {
+  width: 960px;
+  background-color: white;
+}
+
+/*-----------------전체 사이즈 및 색상 끝-----------------*/
+
+/*-----------------공통 CSS 시작-----------------*/
+
+/*<a 링크> 공통 디자인*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*<더보기> 공통*/
+.more {
+  font-size: 13px;
+  color: #808080;
+  float: right;
+  position: relative;
+  right: 50px;
+  top: 15px;
+}
+
+/*<타이틀> 공통*/
+.title {
+  font-size: 16px;
+  font-weight: 580;
+  display: inline;
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+
+/*-----------------공통 CSS 끝-----------------*/
+
+/*-----------------헤더 시작-----------------*/
+
+/*헤더 전체 위치 및 크기*/
+header {
+  position: relative;
+  width: 960px;
+}
+
+.head {
+  width: 960px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: #7DB249;
+}
+
+/*로고 이미지*/
+.logo {
+  width: 54px;
+  height: 55px;
+  float: left;
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+/*로고 타이틀*/
+.logotitle {
+  float: left;
+  color: white;
+  font-size: 30px;
+  font-family: 'Cafe24Ssurround';
+  position: relative;
+  top: 14px;
+  left: 3px;
+}
+
+.logotitle:hover {
+  cursor: pointer;
+}
+
+/*로그인 아이콘 이미지*/
+.userlogo {
+  width: 63px;
+  height: 63px;
+  float: right;
+  position: relative;
+  bottom: 2px;
+  right: 5px;
+}
+
+.userlogo:hover {
+  cursor: pointer;
+}
+
+/*마우스 오버 시 드롭다운 메뉴*/
+
+.login ul {
+  list-style: none;
+  width: 150px;
+  float: right;
+}
+
+.login a {
+  text-decoration: none;
+}
+
+.login>li {
+  list-style: none;
+}
+
+.login>li>a {
+  display: block;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.login>li:hover .menu {
+  display: block;
+}
+
+.login .menu {
+  display: none;
+  position: absolute;
+  left: 770px;
+  top: 50px;
+  text-align: center;
+}
+
+.login .menu a {
+  display: block;
+  padding: 5px;
+  background-color:rgba(125, 178, 73, 0.7);/*까만색(0,0,0) 80% 불투명도*/
+  color: #fff;
+}
+
+
+/*-----------------헤더 끝-----------------*/
+
+/*-----------------이벤트 슬라이드 시작-----------------*/
+
+/*헤더와 슬라이드 위치와의 간격*/
+.slide {
+  padding-top: 50px;
+}
+
+/*슬라이드 영역의 크기 및 위치*/
+.slideimg {
+  width: 960px;
+  float: left;
+  overflow: hidden;
+}
+
+/*슬라이드 이미지 크기 및 위치*/
+.slideimg img {
+  width: 880px;
+  height: 400px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*-----------------이벤트 슬라이드 끝-----------------*/
+
+/*-----------------카테고리 시작-----------------*/
+
+/*카테고리 전체 영역*/
+.category {
+  margin: 0 auto;
+  width: 960px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*카테고리 메뉴별 영역*/
+.category_menu {
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/*카테고리 메뉴 링크*/
+.category_menu a {
+  text-decoration: none;
+  color: #656565;
+  font-size: 16px;
+}
+
+/*카테고리 메뉴 아이콘 이미지*/
+.category_menu img {
+  width: 50px;
+  height: 50px;
+}
+
+/*-----------------카테고리 끝-----------------*/
+
+/*-----------------날짜/지역/카테고리 검색 시작-----------------*/
+
+/*검색 전체 영역*/
+.search {
+  margin: 0 auto;
+  width: 960px;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*검색 중 체크인아웃/지역/카테고리 영역*/
+.search_box {
+  background-color: #E8E0A1;
+  border-radius: 5px;
+  width: 800px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-top: 7px;
+}
+
+/*체크인/체크아웃/카테고리별 크기 및 색상*/
+.search_input {
+  width: 130px;
+  border: none;
+  background-color: #E8E0A1;
+  color: #515151;
+}
+
+/*검색영역 중 input 고정글자 색상*/
+input::placeholder {
+  color: black;
+}
+
+/*검색영역 중 이미지*/
+.search_box img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 35px;
+  top: 14px;
+}
+
+/*검색영역의 검색버튼*/
+.search_btn {
+  border-radius: 5px;
+  margin-right: 50px;
+  border: none;
+  outline: 0;
+  color: white;
+  background-color: #FAAE58;
+  margin-top: 7px;
+  width: 50px;
+  height: 50px;
+}
+
+.search_btn:hover {
+  background-color: #E8E0A1;
+  color: #FAAE58;
+  cursor: pointer;
+}
+
+/*-----------------날짜/지역/카테고리 검색 끝-----------------*/
+
+/*-----------------특가상품 시작-----------------*/
+
+/*특가상품 전체 영역*/
+.sale {
+  margin-top: 30px;
+}
+
+/*특가상품 리스트 위치*/
+.sale_content {
+  margin: 0 auto;
+  position: relative;
+  top: 5px;
+}
+
+/*특가상품 이미지*/
+.sale_img {
+  width: 190px;
+  height: 180px;
+  border-radius: 5px;
+}
+
+/*특가상품 이미지 하단 내용 위치*/
+.saledetail {
+  position: relative;
+  left: 6px;
+  top: 5px;
+}
+
+/*특가상품 캠핑장명*/
+.sale_cam_title {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/*특가상품 주소*/
+.sale_cam_ad {
+  color: #808080;
+  font-size: 13px;
+}
+
+/*특가상품 가격*/
+.sale_cam_pr {
+  color: #f07a1c;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/*특가상품 슬라이드*/
+.slick-slide {
+  margin: 15px;
+}
+
+/*슬라이드 하단 페이지 점*/
+.slick-dots {
+  position: absolute;
+  bottom: -15px;
+}
+
+/*-----------------특가상품 끝-----------------*/
+
+/*-----------------추천캠핑장 시작-----------------*/
+
+/*추천캠핑장 전체 영역*/
+.recommend {
+  height: 300px;
+}
+
+/*추천캠핑장 타이틀 옆 <광고>*/
+.ad {
+  display: inline;
+  position: relative;
+  left: 20px;
+  top: 10px;
+  font-size: 13px;
+  border-radius: 45%;
+  background-color: #FAAE58;
+  color: white;
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.reco_content {
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px -5px gray;
+  height: 210px;
+  width: 900px;
+  position: relative;
+  top: 20px;
+}
+
+/*추천 캠핑장 이미지*/
+.reco_img {
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 250px;
+  height: 150px;
+}
+
+/*추천캠핑장 설명 중 제목*/
+.reco_title {
+  display: inline;
+  position: relative;
+  bottom: 115px;
+  font-weight: bold;
+  font-size: 25px;
+  left: 8px;
+}
+
+/*추천캠핑장 설명 중 상세설명s*/
+.reco_describe {
+  width: 450px;
+  float: right;
+  position: relative;
+  right: 170px;
+  bottom: 110px;
+}
+
+/*추천캠핑장 설명 중 해쉬태그 위치*/
+.reco_hashtag {
+  display: flex;
+  width: 300px;
+  position: relative;
+  bottom: 50px;
+  left: 200px;
+}
+
+/*추천캠핑장 설명 중 해쉬태그 디자인*/
+.hashtag {
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  padding: 3px;
+  font-size: 12px;
+}
+
+/*추천캠핑장 가격*/
+.reco_price {
+  float: right;
+  position: relative;
+  left: 410px;
+  bottom: 170px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*추천캠핑장 예약가능*/
+.reco_reservation {
+  float: right;
+  position: relative;
+  bottom: 150px;
+  left: 500px;
+  color: skyblue;
+}
+
+/*-----------------추천캠핑장 끝-----------------*/
+
+/*-----------------매거진 시작-----------------*/
+
+/*매거진 전체 영역*/
+.magazine {
+  width: 960px;
+  height: 320px;
+  position: relative;
+  bottom: 20px;
+}
+
+/*매거진 이미지*/
+.magazine img {
+  width: 430px;
+  height: 260px;
+  border-radius: 7px;
+}
+
+/*매거진 이미지 위치*/
+.magazine_content {
+  float: left;
+  position: relative;
+  top: 20px;
+  margin-bottom: 60px;
+  padding-right: 25px;
+  padding-left: 25px;
+  text-align: center;
+}
+
+/*매거진 이미지 위에 메인 텍스트*/
+.imgtext {
+  position: absolute;
+  bottom: 130px;
+  left: 85px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  opacity: 1;
+}
+
+/*매거진 이미지 위에 서브 텍스트*/
+.imgtextside {
+  position: absolute;
+  bottom: 110px;
+  left: 55px;
+  color: white;
+  opacity: 1; 
+}
+
+/*-----------------매거진 끝-----------------*/
+
+/*-----------------푸터 시작-----------------*/
+
+/*푸터 전체 영역*/
+footer {
+  width: 960px;
+  background-color: #F5F5F5;
+  font-size: 12px;
+  height: 80px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+/*푸터 회사소개~사업자정보확인 위치*/
+.footer_link {
+  float: left;
+  display: flex;
+  position: relative;
+  left: 10px;
+}
+
+/*푸터 회사소개~사업자정보확인 링크*/
+.footer_link a {
+  text-decoration: none;
+  color: #808080;
+}
+
+.footer_link a:hover {
+  color: red;
+  cursor: pointer;
+}
+
+/*Corp 위치 및 색상*/
+.corp {
+  float: right;
+  color: #808080;
+  position: relative;
+  right: 20px;
+}
+
+/*푸터 컨텐츠 위치*/
+.footer_content {
+  float: left;
+  position: relative;
+  top: 20px;
+  left: 10px;
+  color: #808080;
+  margin-bottom: 40px;
+}
+
+/*푸터 회사 주소 및 전화번호 위치*/
+.compony_info {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+/*-----------------푸터 끝-----------------*/
